@@ -154,7 +154,7 @@
 // Limitation settings
 #define I_MOT_MAX       15              // [A] Maximum single motor current limit
 #define I_DC_MAX        17              // [A] Maximum stage2 DC Link current limit for Commutation and Sinusoidal types (This is the final current protection. Above this value, current chopping is applied. To avoid this make sure that I_DC_MAX = I_MOT_MAX + 2A)
-#define N_MOT_MAX       100            // [rpm] Maximum motor speed limit
+#define N_MOT_MAX       500            // [rpm] Maximum motor speed limit
 
 // Field Weakening / Phase Advance
 #define FIELD_WEAK_ENA  0               // [-] Field Weakening / Phase Advance enable flag: 0 = Disabled (default), 1 = Enabled
@@ -531,19 +531,19 @@
       #define MULTI_MODE_DRIVE_M1_MAX   175
       #define MULTI_MODE_DRIVE_M1_RATE  150
       #define MULTI_MODE_M1_I_MOT_MAX   I_MOT_MAX
-      #define MULTI_MODE_M1_N_MOT_MAX   150
+      #define MULTI_MODE_M1_N_MOT_MAX   200
 
       // INTERMEDIATE MODE: Power ON + Brake [pressed] + Throttle [released]
       #define MULTI_MODE_DRIVE_M2_MAX   500
       #define MULTI_MODE_DRIVE_M2_RATE  300
       #define MULTI_MODE_M2_I_MOT_MAX   I_MOT_MAX
-      #define MULTI_MODE_M2_N_MOT_MAX   200
+      #define MULTI_MODE_M2_N_MOT_MAX   275
 
       // ADVANCED MODE:    Power ON + Brake [pressed] + Throttle [pressed]
       #define MULTI_MODE_DRIVE_M3_MAX   1000
       #define MULTI_MODE_DRIVE_M3_RATE  450
       #define MULTI_MODE_M3_I_MOT_MAX   I_MOT_MAX
-      #define MULTI_MODE_M3_N_MOT_MAX   300
+      #define MULTI_MODE_M3_N_MOT_MAX   350
   #endif
 
 #endif
