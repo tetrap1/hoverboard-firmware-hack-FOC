@@ -529,19 +529,19 @@
  #ifdef MULTI_MODE_DRIVE
       // BEGINNER MODE:     Power ON + Brake [released] + Throttle [released or pressed]
       #define MULTI_MODE_DRIVE_M1_MAX   1200
-      #define MULTI_MODE_DRIVE_M1_RATE  250
+      #define MULTI_MODE_DRIVE_M1_RATE  100
       #define MULTI_MODE_M1_I_MOT_MAX   I_MOT_MAX
-      #define MULTI_MODE_M1_N_MOT_MAX   N_MOT_MAX
+      #define MULTI_MODE_M1_N_MOT_MAX   500
 
       // INTERMEDIATE MODE: Power ON + Brake [pressed] + Throttle [released]
       #define MULTI_MODE_DRIVE_M2_MAX   1200
-      #define MULTI_MODE_DRIVE_M2_RATE  500
+      #define MULTI_MODE_DRIVE_M2_RATE  100
       #define MULTI_MODE_M2_I_MOT_MAX   I_MOT_MAX
-      #define MULTI_MODE_M2_N_MOT_MAX   N_MOT_MAX
+      #define MULTI_MODE_M2_N_MOT_MAX   800
 
       // ADVANCED MODE:    Power ON + Brake [pressed] + Throttle [pressed]
       #define MULTI_MODE_DRIVE_M3_MAX   1200
-      #define MULTI_MODE_DRIVE_M3_RATE  N_MOT_MAX
+      #define MULTI_MODE_DRIVE_M3_RATE  100
       #define MULTI_MODE_M3_I_MOT_MAX   I_MOT_MAX
       #define MULTI_MODE_M3_N_MOT_MAX   N_MOT_MAX
   #endif
@@ -622,7 +622,7 @@
   #define INVERT_L_DIRECTION
   // #define SUPPORT_BUTTONS_LEFT       // use left sensor board cable for button inputs.  Disable DEBUG_SERIAL_USART2!
   // #define SUPPORT_BUTTONS_RIGHT      // use right sensor board cable for button inputs. Disable DEBUG_SERIAL_USART3!
-  // #define STANDSTILL_HOLD_ENABLE     // [-] Flag to hold the position when standtill is reached. Only available and makes sense for VOLTAGE or TORQUE mode.
+  #define STANDSTILL_HOLD_ENABLE     // [-] Flag to hold the position when standtill is reached. Only available and makes sense for VOLTAGE or TORQUE mode.
 
   #ifdef CONTROL_PWM_RIGHT
     #define DEBUG_SERIAL_USART2         // left sensor cable debug
