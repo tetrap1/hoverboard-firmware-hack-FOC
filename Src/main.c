@@ -338,6 +338,10 @@ int main(void) {
           speed = steer - speed;                // Reverse driving: in this case steer = Brake, speed = Throttle
         }
         steer = 0;                              // Do not apply steering to avoid side effects if STEER_COEFFICIENT is NOT 0
+
+        if (!MultipleTapBrake.b_multipleTap)    // DODAŁEm
+        speed = MIN(speed, 300)                 // DODAŁEM
+
       }
       #endif
 
